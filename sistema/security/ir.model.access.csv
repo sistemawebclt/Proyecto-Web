@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_sistema1,reglaAccesoADMal,model_sistema_alumno,,1,1,1,1
+access_sistema2,reglaAccesoADMpr,model_sistema_profesor,,1,1,1,1
+access_sistema3,reglaAccesoADMap,model_sistema_apoderado,,1,1,1,1
+access_sistema4,reglaAccesoADMat,model_sistema_atraso,,1,1,1,1
+access_sistema5,reglaAccesoADMdetAt,model_sistema_detalle_atraso,,1,1,1,1

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.ui.view" id="profesor_tree_view">
+            <field name="name">Lista de profesors</field>
+            <field name="model">sistema.profesor</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Idea list">
+                    <field name="id" string='Código profesor'/>
+                    <field name="nombres_profesor" string='Nombre'/>
+                    <field name="apellidos_profesor" string='Apellido'/>
+                    <field name="especialidad_profesor" string='Ramo que imparte'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="profesor_list_action">
+            <field name="name">profesor</field>
+            <field name="res_model">sistema.profesor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Mi primer profesor de la lista
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="profesor_menu" name="profesor" parent="sistema_menu" action="profesor_list_action"/>
+    
+
+
+    </data>
+</odoo>
