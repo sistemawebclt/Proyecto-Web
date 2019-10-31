@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.ui.view" id="inspector_tree_view">
+            <field name="name">Lista de inspectores</field>
+            <field name="model">sistema.inspector</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Idea list">
+                    <field name="id" string='rut inspector'/>
+                    <field name="nombres_inspector" string='Nombre'/>
+                   
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="inspector_list_action">
+            <field name="name">inspector</field>
+            <field name="res_model">sistema.inspector</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Mi primer inspector de la lista
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="inspector_menu" name="inspector" parent="sistema_menu" action="inspector_list_action"/>
+    
+
+
+    </data>
+</odoo>
