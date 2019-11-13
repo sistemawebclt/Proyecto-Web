@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.ui.view" id="asignatura_tree_view">
+            <field name="name">Lista de asignaturas</field>
+            <field name="model">sistema.asignatura</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Idea list">
+                    <field name="id" string='numero asignatura'/>
+                    <field name="id_asignatura" string='id_asignatura'/>
+                    <field name="id_profesor" string='profesor'/>
+                    <field name="nombre_asignatura" string='nombre'/>
+                    <field name="id_nota" string='nota'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="asignatura_list_action">
+            <field name="name">asignatura</field>
+            <field name="res_model">sistema.asignatura</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Mi primera asignatura
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="asignatura_menu" name="asignatura" parent="sistema_menu" action="asignatura_list_action"/>
+    
+
+
+    </data>
+</odoo>

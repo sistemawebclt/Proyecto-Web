@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record id="alumno_form_view" model="ir.ui.view">
+            <field name="name">Lista de Alumnos</field>
+            <field name="model">sistema.alumno</field>
+            <field name="arch" type="xml">
+                <!--
+                <tree string="Idea list">
+                    <field name="id" string='Código alumno'/>
+                    <field name="nombres_alumno" string='Nombre'/>
+                    <field name="apellidos_alumno" string='Apellido'/>
+                    <field name="rut_alumno" string='RUN'/>
+                    <field name="fecha_nacimiento_alumno"/>
+                    <field name="cod_curso" string='curso'/>
+                    <field name="id_nota" string='nota'/>
+                </tree>
+                -->
+
+                <form>
+                    <sheet>
+                        <group string="Información del Estudiante">
+                            <group col= '2'>
+                                <field name="nombres_alumno" string='Nombres: '/>
+                                <field name="rut_alumno" string='RUN: '/>
+                                <field name="edad_alumno" string='Edad: '/>
+                            </group>
+                            <group>
+                                <field name="apellidos_alumno" string='Apellidos: '/>
+                                <field name="fecha_nacimiento_alumno" string='Fecha de Nacimiento: '/>
+                            </group>
+                        </group>   
+                        <group string="Domicilio">
+                            <group>
+                                <field name="domicilio_alumno" string='Dirección: '/> 
+                            </group>
+                            <group>
+                                <field name="comuna_alumno" string= 'Comuna: '/>  
+                            </group>                          
+                        </group>
+                        <group col="3" string="Antecedentes Escolares">
+                            <group>
+                                <field name="procedencia_alumno" string='Escuela de Procedencia: '/> 
+                                <field name="cod_curso" string='Curso al que ingresa: '/>
+                            </group>
+                            <group>
+                                <field name="fecha_ingreso_alumno" string= 'Fecha de Ingreso Institucional: '/>  
+                            </group>
+                            <group>
+                                <field name="cursos_repetidos" string= 'Cursos Reprobados: '/>
+                            </group>                          
+                        </group> 
+                        <group col="3" string="Antecedentes Familiares">
+                            <group>
+                                <field name="nombre_madre" string='Nombre Madre: '/>
+                            </group>
+                            <group>
+                                <field name="nombre_padre" string='Nombre Padre: '/>
+                            </group>
+                            <group>
+                                <field name="vive_con" string="Vive Con: "/>
+                            </group>
+                        </group>  
+                        <group col="1" string="Antecedentes de Salud">
+                            <group>
+                                <field name="info_salud" string='Información médica a considerar: '/>
+                            </group>                        
+                        </group>     
+                        <group col="2">
+                            <group>
+                                <field name="caso_emergencia" string='En caso de emergencia llamar a: '/>
+                            </group>
+                            <group>
+                                <field name="fono_emergencia" string='Teléfono: ' />
+                            </group>
+                        </group>       
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="alumno_list_action">
+            <field name="name">Alumno</field>
+            <field name="res_model">sistema.alumno</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Mi primer alumno de la lista
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="alumno_menu" name="Alumno" parent="sistema_menu" action="alumno_list_action"/>
+    
+
+
+    </data>
+</odoo>

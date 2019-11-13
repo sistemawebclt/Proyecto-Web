@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_sistema1,reglaAccesoADMal,model_sistema_alumno,,1,1,1,1
+access_sistema2,reglaAccesoADMpr,model_sistema_profesor,,1,1,1,1
+access_sistema3,reglaAccesoADMap,model_sistema_apoderado,,1,1,1,1
+access_sistema4,reglaAccesoADMat,model_sistema_atraso,,1,1,1,1
+access_sistema5,reglaAccesoADMdetAt,model_sistema_detalle_atraso,,1,1,1,1
+access_sistema6,reglaAccesoADMcu,model_sistema_curso,,1,1,1,1
+access_sistema7,reglaAccesoADMin,model_sistema_inspector,,1,1,1,1
+access_sistema8,reglaAccesoADMci,model_sistema_citacion,,1,1,1,1
+access_sistema9,reglaAccesoADMno,model_sistema_nota,,1,1,1,1
+access_sistema10,reglaAccesoADMas,model_sistema_asignatura,,1,1,1,1

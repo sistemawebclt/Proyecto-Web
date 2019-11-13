@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    
+        <record model="ir.ui.view" id="atraso_tree_view">
+            <field name="name">Lista de atrasos</field>
+            <field name="model">sistema.atraso</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Idea list">
+                    <field name="id" string='Código atraso'/>
+                    <field name="fecha_atraso"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="atraso_form_view">
+            <field name="name">Formulario atraso</field>
+            <field name="model">sistema.atraso</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="fecha_atraso"/>
+                    <field name="detalle_atraso_ids">
+                        <tree string="Detalles atrasos">
+
+                           
+                        </tree>
+                    </field>
+                </form>
+
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="atraso_list_action">
+            <field name="name">atraso</field>
+            <field name="res_model">sistema.atraso</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Mi primer atraso
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="atraso_menu" name="atraso" parent="sistema_menu" action="atraso_list_action"/>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+       
+        <record model="ir.ui.view" id="inicio_tree_view">
+            <field name="name">Lista de inicioes</field>
+            <field name="model">sistema.inicio</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Idea list">
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="inicio_menu" name="inicio" parent="sistema_menu" action="inicio_list_action"/>
+    
+
+
+    </data>
+</odoo>

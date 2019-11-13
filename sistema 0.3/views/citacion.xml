@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.ui.view" id="citacion_tree_view">
+            <field name="name">Lista de citaciones</field>
+            <field name="model">sistema.citacion</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Idea list">
+                    <field name="id" string='Código citacion'/>
+                    <field name="id_profesor" string='rut profesor'/>
+                    <field name="rut_apoderado" string='rut_apoderado'/>
+                    <field name="fecha_citacion" string='fecha'/>
+                    <field name="asunto" string='asunto'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="citacion_list_action">
+            <field name="name">citacion</field>
+            <field name="res_model">sistema.citacion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">no hay citas
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="citacion_menu" name="citacion" parent="sistema_menu" action="citacion_list_action"/>
+    
+
+
+    </data>
+</odoo>

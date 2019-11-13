@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_sistema_menu" name="Colegio Club de Leones"/>
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="sistema_menu" name="Menú" parent="main_sistema_menu"/>
+
+
+    </data>
+</odoo>

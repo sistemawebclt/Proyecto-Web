@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="detalle_atraso_list_action">
+            <field name="name">atraso</field>
+            <field name="res_model">sistema.detalle_atraso</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Mi primer detalle de atraso
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+
+
+        <menuitem id="detalle_atraso_menu" name="detalle_atraso" parent="sistema_menu" action="detalle_atraso_list_action"/>
+
+
+
+    </data>
+</odoo>

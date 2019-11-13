@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="grupo_administrador" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="comment">Acceso Administrador </field>
+        </record>
+        
+    </data>
+</odoo>
